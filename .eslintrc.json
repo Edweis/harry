@@ -1,0 +1,54 @@
+{
+    "parser": "babel-eslint",
+    "plugins": [
+        "babel",
+        "react",
+        "import",
+        "prettier",
+        "flowtype",
+        "flowtype-errors"
+    ],
+    "globals": {
+        "$Keys": null,
+        "$Call": null,
+        "SyntheticInputEvent": null,
+        "SyntheticEvent": null
+    },
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true,
+        "jasmine": true
+    },
+    "extends": [
+        "airbnb",
+        "prettier",
+        "prettier/react",
+	"prettier/flowtype"
+    ],
+    "rules": {
+        "prettier/prettier": ["error", {
+            "singleQuote": true,
+            "trailingComma": "all"
+        }],
+        "prefer-destructuring": ["error", {
+            "array": false,
+            "object": true
+        }],
+	"react/destructuring-assignment": ["error", "never"],
+	"jsx-a11y/click-events-have-key-events": ["warn"],
+        "jsx-a11y/anchor-is-valid": ["error", {
+            "components": ["Link"],
+            "specialLink": ["to"]
+        }],
+        "react/no-typos": ["off"],
+        "react/jsx-curly-brace-presence": ["error"],
+        "no-return-assign": ["error", "except-parens"],
+        "arrow-parens": "off",
+        "import/no-extraneous-dependencies": ["error", {
+            "devDependencies": true
+        }],
+        "flowtype-errors/show-errors": 2
+    }
+}
+
